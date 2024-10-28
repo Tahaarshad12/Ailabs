@@ -1,0 +1,61 @@
+Python lab # 2
+
+Task 1: Check if a Value is True or False
+In Python, any non-zero number or non-empty data structure is considered True, while zero, empty data structures, and None are False.
+
+python
+# Task 1: Check if a Value is True or False
+value = input("Enter a value: ")
+
+# Check if the value is True or False
+if value:
+    print("The value is True.")
+else:
+    print("The value is False.")
+Task 2: Simple Calculator Using Operands
+This calculator performs addition, subtraction, multiplication, and division based on user input.
+
+python
+# Task 2: Calculator Program
+# Ask user for two numbers
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# Ask for the operation
+operation = input("Choose an operation (+, -, *, /): ")
+
+# Perform the calculation based on the chosen operation
+if operation == '+':
+    result = num1 + num2
+elif operation == '-':
+    result = num1 - num2
+elif operation == '*':
+    result = num1 * num2
+elif operation == '/':
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error: Cannot divide by zero"
+else:
+    result = "Invalid operation"
+
+print("The result is:", result)
+Task 3: Examples of Different String Types ("", '', """ """)
+Python allows strings to be created using different types of quotes, allowing for flexibility in handling quotes within strings.
+
+python
+# Task 3: Different Types of Strings
+
+# Using double quotes ""
+string1 = "Hello, World!"
+print("String using double quotes:", string1)
+
+# Using single quotes ''
+string2 = 'Python programming is fun!'
+print("String using single quotes:", string2)
+
+# Using triple quotes """ """ for multiline strings
+string3 = """This is a
+multiline string,
+which spans multiple lines."""
+print("String using triple quotes:\n", string3)
