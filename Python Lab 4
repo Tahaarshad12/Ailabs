@@ -1,1 +1,50 @@
+Task 1: Login Program
+python
+# Task 1: Login Program
+# Set the correct username and password
+correct_username = "admin"
+correct_password = 12345
 
+# Ask the user to enter username and password
+username = input("Enter username: ")
+password = int(input("Enter password: "))
+
+# Check if both username and password are correct
+if username == correct_username and password == correct_password:
+    print("Login successful")
+elif username != correct_username:
+    print("Incorrect username")
+elif password != correct_password:
+    print("Incorrect password")
+Task 2: Simple ATM Machine
+python
+# Task 2: Simple ATM Machine
+# Set the correct PIN and initial balance
+correct_pin = 1234
+balance = 1000  # Initial balance
+
+# Ask the user to enter their PIN
+pin = int(input("Enter your PIN: "))
+
+# Check if the entered PIN is correct
+if pin == correct_pin:
+    print("PIN correct. Welcome to the ATM.")
+    # Provide options for the user
+    print("1. Check Balance")
+    print("2. Withdraw Money")
+    option = int(input("Choose an option (1 or 2): "))
+
+    # Handle each option
+    if option == 1:
+        print(f"Your balance is ${balance}")
+    elif option == 2:
+        withdrawal_amount = int(input("Enter amount to withdraw: "))
+        if withdrawal_amount <= balance:
+            balance -= withdrawal_amount
+            print(f"Withdrawal successful. New balance: ${balance}")
+        else:
+            print("Insufficient balance")
+    else:
+        print("Invalid option selected.")
+else:
+    print("Incorrect PIN.")
